@@ -23,22 +23,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun click(view: View) {
-
-        val email = editTextTextEmailAddress.text.toString()
-        val pass = editTextTextPassword.text.toString()
-
-        val repository = Repository()
-        val viewModelFactory = MainViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
-        viewModel.getFeelings(FeelMin(email, pass))
-        viewModel.myResponse.observe(this, Observer { response ->
-            Log.d("Response", response.body().toString())
-            Log.d("Response", response.message().toString())
-            Log.d("Response", response.code().toString())
-        })
-
-        val intent = Intent(this, MainActivity2::class.java)
-        startActivity(intent)
-    }
 }
