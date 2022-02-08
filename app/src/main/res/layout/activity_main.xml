@@ -6,11 +6,27 @@
     android:layout_height="wrap_content"
     tools:context=".retrofit.api.MainActivity">
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/reccucl"
-        android:background="#B6B6B6"/>
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@id/editTextTextEmailAddress"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_below="@id/editTextTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:text="Button" />
 </RelativeLayout>

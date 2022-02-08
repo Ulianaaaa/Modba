@@ -1,6 +1,9 @@
 package com.example.mssko.retrofit.model
 
 data class Feel (
-    val data : List<FeelInData>,
-    val success:Boolean
+    val id : String,
+    val email:String,
+    val nickName : String,
+    val avatar : String,
+    val token : String
         )
